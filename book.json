@@ -1,0 +1,30 @@
+[
+  {
+    "title": "จิตวิทยาสายดาร์ก",
+    "author": "Dr. Hiro",
+    "cover_image": "https://images-se-ed.com/ws/Storage/Originals/978616/287/9786162876080L.jpg",
+    "price": 250,
+    "description": "พบกับเทคนิคทางจิตวิทยา ที่ช่วยให้คุณใช้คำพูดควบคุมจิตใจคน ทำให้พวกเขาคล้อยตามและทำอย่างที่คุณต้องการโดยไม่รู้ตัว"
+  },
+  {
+    "title": "คิดแล้ว, คิดอีก : Think Again",
+    "author": "Adam Grant",
+    "cover_image": "https://images-se-ed.com/ws/Storage/Thumbnails2/978616/287/9786162875045.JPG",
+    "price": 395,
+    "description": "การคิด เป็นคุณสมบัติที่สำคัญที่สุดของมนุษย์ หากปราศจากมัน เราย่อมไม่สามารถแก้ปัญหาเรียนรู้สิ่งใหม่"
+  },
+  {
+    "title": "ใช้คลื่นพลังบวกดึงดูดพลังสุข",
+    "author": "Vex King",
+    "cover_image": "https://images-se-ed.com/ws/Storage/Originals/978616/184/9786161844899L.jpg",
+    "price": 245,
+    "description": "ใช้ กฎแห่งแรงสั่นสะเทือ ดึงดูดพลังงานบวกรอบตัว เพื่อบรรลุ ความสุข และ เป้าหมายอันยิ่งใหญ่กว่าที่คุณคิดฝัน"
+  },
+  {
+    "title": "The Psychology of Money  จิตวิทยาว่าด้วยเงิน",
+    "author": "Morgan Housel",
+    "cover_image": "https://images-se-ed.com/ws/Storage/Originals/978616/818/9786168187425L.jpg",
+    "price": 290,
+    "description": "บทเรียนเหนือกาลเวลาเรื่องความมั่งคั่ง ความโลภ และความสุข"
+  }
+]

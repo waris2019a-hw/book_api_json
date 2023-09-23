@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bookstore Search</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+  <h1>Bookstore Search</h1>
+  <input type="text" id="searchInput" placeholder="Enter book title">
+  <button id="searchButton">Search</button>
+
+  <script>
+    // Function to load JSON data using jQuery
+    function loadJSON(callback) {
+      $.getJSON('bookstore.json', function (data) {
+        callback(data);
+      });
+    }
+
+    // Function to display book details
+    function displayBooks(books) {
+      // Clear previous results
+      $('#results').empty();
+
+      // Iterate over the books array
+      $.each(books, function (index, book) {
+        var bookInfo = $('<div>');
+        bookInfo.append($('<h3>').text(book.title));
+        bookInfo.append($('<p>').text('Author: ' + book.author));
+        bookInfo.append($('<p>').text('Year: ' + book.year));
+        bookInfo.append($('<p>').text('ISBN: ' + book.isbn));
+        $('#results').append(bookInfo);
+      });
+    }
+
+    // Event listener for search button click
+    $('#searchButton').click(function () {
+      // Retrieve the input value from the textbox
+      var searchInput = $('#searchInput').val();
+
+      // Load JSON data and retrieve selected records
+      loadJSON(function (data) {
+        // Access the bookstore object and its properties
+        var bookstore = data.bookstore;
+        console.log("Bookstore Name: " + bookstore.name);
+        console.log("Location: " + bookstore.location);
+
+        // Filter the books array based on the input value
+        var books = bookstore.books;
+        var filteredBooks = books.filter(function (book) {
+          return book.title.toLowerCase().includes(searchInput.toLowerCase());
+        });
+
+        // Display the filtered books
+        displayBooks(filteredBooks);
+      });
+    });
+  </script>
+
+  <div id="results"></div>
+</body>
+</html>

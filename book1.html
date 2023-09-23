@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Book Store</title>
+</head>
+<body>
+  <h1>Book Store</h1>
+
+  <div id="bookList"></div>
+
+  <script>
+    // Fetch the JSON file
+    fetch('book1.json')
+      .then((response) => response.json())
+      .then((data) => {
+        // Access the book store name
+        const storeName = data.storeName;
+
+        // Access the books array
+        const books = data.books;
+
+        // Create an HTML list of books
+        const bookList = document.getElementById('bookList');
+        const ul = document.createElement('ul');
+
+        books.forEach((book) => {
+          const li = document.createElement('li');
+          li.textContent = book.title;
+          ul.appendChild(li);
+        });
+
+        bookList.appendChild(ul);
+      })
+      .catch((error) => {
+        console.error('Error:', error);
+      });
+  </script>
+</body>
+</html>

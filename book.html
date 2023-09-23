@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    .book {
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+    .book img {
+      width: 200px;
+      height: auto;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div id="bookList"></div>
+
+  <script>
+    $(document).ready(function() {
+      $.getJSON('book.json', function(data) {
+        var bookList = '';
+
+        // Process each book object in the loaded JSON data
+        $.each(data, function(index, book) {
+          bookList += '<div class="book">';
+          bookList += '<h2>' + book.title + '</h2>';
+          bookList += '<p><strong>Author:</strong> ' + book.author + '</p>';
+          bookList += '<img src="' + book.cover_image + '" alt="' + book.title + '">';
+          bookList += '<p><strong>Price:</strong> $' + book.price + '</p>';
+          bookList += '<p>' + book.description + '</p>';
+          bookList += '</div>';
+        });
+
+        // Display the book list in the <div> element
+        $('#bookList').html(bookList);
+      });
+    });
+  </script>
+</body>
+</html>
