@@ -2,3 +2,7 @@
 ตัวอย่างการใช้ json โหลดข้อมูลหนังสือ 
 book.html - โหลดข้อมูลหนังสือ json
 bookstore.html - Search ข้อมูลหนังสือ
+
+หน้าเวบ 
+https://book-api-json.vercel.app/book.html
+
